@@ -12,13 +12,13 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
-  api.use('ecmascript');
-  api.addFiles('mathify.js');
+  api.use('coffeescript');
+  api.addFiles('mathify.coffee');
 });
 
 Package.onTest(function(api) {
-  api.use('ecmascript');
   api.use('tinytest');
+  api.use('coffeescript')
   api.use('markuskl:mathify');
-  api.addFiles('mathify-tests.js');
+  api.addFiles('mathify-tests.coffee')
 });
