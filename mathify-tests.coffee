@@ -1,4 +1,3 @@
 
-Tinytest.add('example', (test) ->
-  test.equal(true, true)
-)
+Tinytest.add 'test', (test) ->
+    test.isTrue true
