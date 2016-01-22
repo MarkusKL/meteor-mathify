@@ -9,12 +9,17 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('coffeescript');
+
+  api.addFiles('global.js');
   api.addFiles('mathify.coffee');
+
+  api.export('Mathify');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('coffeescript')
   api.use('markuskl:mathify');
+
   api.addFiles('mathify-tests.coffee')
 });

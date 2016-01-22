@@ -1,3 +1,3 @@
 
 Tinytest.add 'test', (test) ->
-    test.isTrue true
+    test.isTrue Mathify.truth
