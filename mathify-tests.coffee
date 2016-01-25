@@ -18,22 +18,22 @@ even if the parameters given are the same.
 ///
 
 standardTest 'Type - Boolean', [
-    [true, true, false],
-    [false, false, false],
+    [true, true, false]
+    [false, false, false]
     [true, false, false]
 ]
 
 standardTest 'Type - Number', [
-    [1, 1, false],
-    [-1.3, -1.3, false],
-    [0.0, 0.0, false],
+    [1, 1, false]
+    [-1.3, -1.3, false]
+    [0.0, 0.0, false]
     [1, 2.4, false]
 ]
 
 standardTest 'Type - Object', [
-    [{a:"a"}, {a:"a"}, false],
+    [{a:"a"}, {a:"a"}, false]
     [[3,true], [3,true], false]
-    [{b:true,c:[1,2]}, {b:true,c:[1,2]}, false],
+    [{b:true,c:[1,2]}, {b:true,c:[1,2]}, false]
     [null, null, false]
 ]
 
