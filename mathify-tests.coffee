@@ -40,3 +40,29 @@ standardTest 'Type - Object', [
 standardTest 'Type - Undefined', [
     [undefined, undefined, false]
 ]
+
+/// Reflexivity tet ///
+///
+The function should return true for equal strings
+///
+
+standardTest 'Reflx - Atom', [
+    ['a','a',true]
+    ['x','x',true]
+    ['R','R',true]
+    ['f','f',true]
+]
+
+standardTest 'Reflx - Simple', [
+    ['a+b','a+b',true]
+    ['p-q','p-q',true]
+    ['1=2','2=1',true]
+    ['x^2','x^2',true]
+    ['R\\{0}','R\\{0}',true]
+]
+
+standardTest 'Reflx - Complex', [
+    ['a+b*c','a+b*c',true]
+    ['(a/3)^2','(a/3)^2',true]
+    ['a^2-3b=6c/d','a^2-3b=6c/d',true]
+]
