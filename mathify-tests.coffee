@@ -66,3 +66,49 @@ standardTest 'Reflx - Complex', [
     ['(a/3)^2','(a/3)^2',true]
     ['a^2-3b=6c/d','a^2-3b=6c/d',true]
 ]
+
+/// Parenthesis ///
+///
+Unnecessary parentheses should be ignored
+///
+
+standardTest 'Paranthesis', [
+    ['(a)','a',true]
+    ['(a+b*c)','a+b*c',true]
+    ['((b))','b',true]
+    ['(a+b)*c','a+b*c',false]
+    ['(a+b)','a+b',true]
+]
+
+/// Plus ///
+///
+The plus operator should be associative and commutative
+///
+
+standardTest 'Plus - Commutativity', [
+    ['a+b','b+a',true]
+    ['a+b+c','a+c+b',true]
+    ['c+b+a','a+b+c',true]
+    ['x+3','3+x',true]
+    ['a*b+x*y','x*y+a*b',true]
+    ['a/(a+b)','a/(b+a)',true]
+]
+
+standardTest 'Plus - Associativity', [
+    ['(a+b)+c','a+(b+c)',true]
+    ['ab+(a^2+b)','(ab+a^2)+b',true]
+]
+
+/// Random ///
+///
+Random real world test cases
+///
+
+standardTest 'Random', [
+    ['2ax+b','b + 2ax',true]
+    ['2ax+b','2*ax+b',true]
+    ['153/715','306/1430',false]
+    ['a+b-2','a-2+b',true]
+    ['-2+a+b','-2+ a +b',true]
+    ['a+b-2','a-b+2',false]
+]
