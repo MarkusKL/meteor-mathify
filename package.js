@@ -8,10 +8,8 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
-  api.use('coffeescript');
 
-  api.addFiles('lib/global.js');
-  api.addFiles('lib/mathify.coffee');
+  api.addFiles('lib/mathify.js');
 
   api.export('Mathify');
 });
