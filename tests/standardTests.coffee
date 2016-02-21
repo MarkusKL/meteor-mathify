@@ -99,6 +99,30 @@ standardTest 'Plus - Associativity', [
     ['ab+(a^2+b)','(ab+a^2)+b',true]
 ]
 
+/// Multiplication ///
+///
+Multiplication should also be associative and commutative,
+and it sould bind tighter than the plus operator.
+Multiplication is the default implicit operator
+///
+
+standardTest 'Multiplication - Implicit', [
+    ['ab','a*b',true],
+    ['ab+cd','a*b+c*d',true],
+    ['abcde','a*b*c*d*e',true]
+]
+
+standardTest 'Multiplication - Commutativity', [
+    ['ab','ba',true],
+    ['a*b+c','c+b*a',true],
+    ['(x+y)*z','z*(y+x)',true]
+]
+
+standardTest 'Multiplication - Associativity', [
+    ['(ab)c','a(bc)',true],
+    ['((a+b)*x)*z','(z*x)*(a+b)',true]
+]
+
 /// Random ///
 ///
 Random real world test cases
