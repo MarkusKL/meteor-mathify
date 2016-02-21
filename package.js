@@ -10,8 +10,8 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('coffeescript');
 
-  api.addFiles('global.js');
-  api.addFiles('mathify.coffee');
+  api.addFiles('lib/global.js');
+  api.addFiles('lib/mathify.coffee');
 
   api.export('Mathify');
 });
@@ -21,5 +21,5 @@ Package.onTest(function(api) {
   api.use('coffeescript')
   api.use('markuskl:mathify');
 
-  api.addFiles('mathify-tests.coffee');
+  api.addFiles('tests/standardTests.coffee');
 });
