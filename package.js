@@ -9,9 +9,14 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
 
-  api.addFiles('lib/mathify.js');
+  api.addFiles('lib/mathify.js','server');
+  api.addAssets('Main.exe','server');
 
-  api.export('Mathify');
+  api.export('Mathify','server');
+});
+
+Npm.depends({
+    "cross-spawn": "2.1.5"
 });
 
 Package.onTest(function(api) {
@@ -19,5 +24,5 @@ Package.onTest(function(api) {
   api.use('coffeescript')
   api.use('markuskl:mathify');
 
-  api.addFiles('tests/standardTests.coffee');
+  api.addFiles('tests/standardTests.coffee','server');
 });
